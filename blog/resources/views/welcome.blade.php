@@ -1,15 +1,22 @@
-<!doctype html>
-<html>
-<head>
-  <title>Home Page</title>
-</head>
-<h1>
-Welcome to my laravel project!
-</h1>
-<p>
-<a href="/contact">Contact us</a>
-</p>
-<p>
-<a href="/about">About</a>
-</p>
-</html>
+@extends('layout')
+
+@section('title','Home')
+
+
+
+
+@section("content")
+<h1>My first website!</h1>
+<ul>
+  @foreach ($tasks as $task)
+
+    <li>
+  {{$task}}
+    </li>
+    @endforeach
+</ul>
+
+
+
+
+@endsection
